@@ -25,13 +25,7 @@ module.exports = {
     });
     config.resolve.extensions.push(".ts", ".tsx");
 
+
     return config;
   }
 };
-
- 
-
-//alles andere löschen
-//package json anpassen
-//git remote anpassen
-//ggf alles rüberkopieren in komplett neues package

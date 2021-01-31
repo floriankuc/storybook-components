@@ -1,0 +1,61 @@
+@import '../css/index.scss';
+
+.card {
+  background-color: $magenta;
+  border: none;
+  box-sizing: border-box;
+  clip-path: polygon(100% 0, 100% 100%, 15% 100%, 0 85%, 0 0);
+  display: flex;
+  flex-flow: column;
+  font-size: 15px;
+  height: 350px;
+  padding: 16px;
+  position: relative;
+  width: 350px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    outline: none;
+
+    &::after {
+      background-color: $lightblue;
+      width: 4px;
+    }
+  }
+
+  &::after {
+    @include hover-after-el;
+  }
+}
+
+.card__title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.card__desc {
+  flex: 1;
+  font-size: 15px;
+}
+
+.card__number {
+  align-self: flex-end;
+  font-size: 30px;
+}
+
+.card__links {
+  display: flex;
+  justify-content: flex-end;
+  width: 350px;
+
+  > a {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

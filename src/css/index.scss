@@ -1,0 +1,32 @@
+$magenta: #ff046d;
+$lightblue: #04d9ff;
+
+@mixin hover-after-el {
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.03s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 0;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: sans-serif;
+}

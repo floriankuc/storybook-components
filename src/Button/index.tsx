@@ -1,10 +1,12 @@
-import React, { FC, ReactElement, PropsWithChildren } from 'react';
-import './button.scss';
+import React, { FC, ReactElement, PropsWithChildren } from 'react'
+import './button.scss'
 
 export interface ButtonProps {
-  type?: 'primary';
+  onClick: () => void
 }
 
-export const Button: FC<ButtonProps> = (props: PropsWithChildren<ButtonProps>): ReactElement => {
-  return <button className={props.type}>{props.children}</button>;
-};
+export const Button: FC<ButtonProps> = (props: PropsWithChildren<ButtonProps>): ReactElement => (
+  <button className={'btn'} onClick={props.onClick}>
+    {props.children}
+  </button>
+)

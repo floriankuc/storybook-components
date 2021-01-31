@@ -1,0 +1,29 @@
+@import '../css/index.scss';
+
+button {
+  background-color: $magenta;
+  border: none;
+  box-sizing: border-box;
+  clip-path: polygon(100% 0, 100% 100%, 12% 100%, 0 60%, 0 0);
+  font-size: 15px;
+  height: 44px;
+  position: relative;
+  text-transform: uppercase;
+  width: 160px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    outline: none;
+
+    &::after {
+      background-color: $lightblue;
+      width: 4px;
+    }
+  }
+
+  &::after {
+    @include hover-after-el;
+  }
+}
